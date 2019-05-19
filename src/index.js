@@ -703,7 +703,7 @@ export default class extends Component {
     // For make infinite at least total > 1
     if (total > 1) {
       // Re-design a loop model for avoid img flickering
-      pages = Object.keys(children)
+      pages = Object.keys(children).filter(i => children[i]);
       if (loop) {
         pages.unshift(total - 1 + '')
         pages.push('0')
